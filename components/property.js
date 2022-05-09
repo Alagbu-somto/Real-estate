@@ -30,7 +30,7 @@ const Property = ({
       cursor="pointer"
       textAlign="center"
     >
-      <Box border="1px" borderColor="#32746d " bg="white">
+      <Box border="1px" borderColor="#32746d " bg="white" paddingBottom="3">
         <Box w="full">
           <Image
             src={coverPhoto ? coverPhoto.url : DefaultImage}
