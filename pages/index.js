@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Flex, Box, Text, Button } from "@chakra-ui/react";
 import { baseUrl, fetchApi } from "../utils/fetchApi";
 import Property from "../components/property";
+import forReantImg from "../assets/images/1652857468144.jpg";
 
 const Banner = ({
   purpose,
@@ -50,13 +51,13 @@ export default function Home({ propertyForSale, propertyForRent }) {
     <Box>
       <Banner
         purpose="RENT A HOME"
-        title1="Rental Home for"
-        title2="Everyone"
-        desc1="Explor Apartments, villas, Homes"
+        title1="Rental Home"
+        title2="For Everyone"
+        desc1="Explore Apartments, villas, Homes"
         desc2="and more"
         buttonText="Explore Renting"
         linkName="/search?purpose=for-rent"
-        imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
+        imageUrl={forReantImg}
       />
       <Flex flexWrap="wrap" justifyContent="center">
         {propertyForRent.map((property) => (
@@ -65,9 +66,9 @@ export default function Home({ propertyForSale, propertyForRent }) {
       </Flex>
       <Banner
         purpose="BUY A HOME"
-        title1="Find, Buy, Own Your"
-        title2="Dream Home"
-        desc1="Explor Apartments, villas, Homes"
+        title1="Find, Buy, Own"
+        title2="Your Dream Home"
+        desc1="Explore Apartments, villas, Homes"
         desc2="and more"
         buttonText="Explore Buying"
         linkName="/search?purpose=for-sale"
